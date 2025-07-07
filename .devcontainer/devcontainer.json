@@ -1,0 +1,25 @@
+{
+  "name": "devops-container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+//        "ms-azuretools.vscode-bicep"
+      ]
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1.2.2": {
+    },
+    "ghcr.io/dhoeric/features/k9s:1": {
+    }
+  },
+
+  "postCreateCommand": "scripts/setup.sh"
+
+}
